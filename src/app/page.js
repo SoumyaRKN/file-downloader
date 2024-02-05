@@ -43,7 +43,7 @@ export default function Home() {
       <p className="mt-4 text-gray-600">Download is {isInProgress ? "in progress" : "stopped"}</p>
 
       <div className="mt-6">
-        <button type="button" onClick={() => cancel()} className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2 text-center me-2 mb-2">Cancel download</button>
+        <button type="button" disabled={isInProgress ? false : true} onClick={() => cancel()} className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2 text-center me-2 mb-2">Cancel download</button>
       </div>
 
       <p className="mt-4 text-gray-600">Download size: {size} bytes</p>
